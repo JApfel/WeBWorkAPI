@@ -1,4 +1,8 @@
 WeBWorkAPI::Application.routes.draw do
+  get "user/name:string"
+  get "user/email:string"
+  get "user/password:string"
+  resources :users, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
